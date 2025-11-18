@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation Interprofessionnelle Agricole Café-Cacao</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 + Font Awesome version of the mission section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* === COULEURS PRINCIPALES === */
+        :root {
+            --primary: #0d6efd;     /* Bleu Bootstrap */
+            --secondary: #28a745;   /* Vert Bootstrap */
+        }
+
+        .topbar {
+            background: var(--primary);
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .stats-card {
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stats-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease-in-out;
+            border-top: 4px solid var(--primary);
+        }
+
+        .stats-card h3 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stats-card p {
+            color: #555;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            background: url("images/logo/cafe-cacao.jpg") center/cover no-repeat;
+            height: 550px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Overlay sombre */
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.55);
+            position: absolute;
+            inset: 0;
+        }
+
+        /* Contenu au-dessus de l’overlay */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+        /* Encadré Président */
+        .president-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            color: #333;
+            border-top: 4px solid var(--primary); /* couleur cacao */
+        }
+
+        .president-box p {
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                height: auto;
+                padding: 60px 0;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+
+        /* Top bar */
+        .topbar {
+            background: #0d6efd; /* marron cacao */
+        }
+
+        .topbar .social-icons a {
+            color: #fff;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .topbar .social-icons a:hover {
+            color: #bcd8bc; /* léger vert */
+        }
+
+
+        /* Navbar */
+        .navbar .nav-link {
+            color: #333;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #0d6efd;
+        }
+
+        .navbar-brand img {
+            object-fit: contain;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar py-1 text-white">
+    <div class="container d-flex justify-content-between align-items-center small">
+
+        <div>
+            <i class="bi bi-telephone"></i> (+225) 27 20 00 00 00 &nbsp;&nbsp;
+            <i class="bi bi-envelope"></i> contact@oia-cafecacao.ci
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+
+        <!-- Logo gauche -->
+        <a class="navbar-brand" href="#">
+            <img src="images/logo/logo-rexcci.jpg" alt="Logo" height="55">
+        </a>
+
+        <!-- Toggle mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="nav">
+
+            <ul class="navbar-nav mx-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Qui sommes nous?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Nos Actions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Actualités</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Partenaires</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+
+            <!-- Logo droite 
+            <a class="navbar-brand d-none d-lg-block" href="#">
+                <img src="images/logo/armoarie.svg" alt="Logo" height="55">
+            </a>-->
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="row align-items-center">
+
+            <!-- Texte -->
+            <div class="col-lg-8 text-white">
+                <h1 class="fw-bold hero-title">
+                    RESEAU DES EXPORTATEURS DE CAFE CACAO DE COTE D'IVOIRE
+                </h1>
+                <p class="lead mt-3 hero-subtitle">
+                    Un acteur clé pour une filière équitable, durable et prospère au service des producteurs.
+                </p>
+                <a href="#" class="btn btn-light btn-lg mt-3">Découvrir notre institution</a>
+            </div>
+
+            <!-- Mot du Président -->
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="president-box text-center p-4 shadow" style="background:white; border-radius:10px;">
+
+                    <!-- Photo ronde avec bord orange -->
+                    <div style="width:150px; height:150px; margin:0 auto; border:4px solid #0d6efd; border-radius:50%; overflow:hidden;">
+                        <img src="images/logo/logo-president.jpg" 
+                            class="img-fluid" 
+                            alt="Président" 
+                            style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <!-- Titre -->
+                    <h5 class="fw-bold mt-3" style="color:#0d6efd;">Mot du Président</h5>
+
+                    <!-- Citation -->
+                    <p class="fst-italic mt-3" style="color:#555;">
+                        "Nous œuvrons pour renforcer la cohésion, la transparence et la compétitivité de notre filière café-cacao, pilier de l’économie ivoirienne."
+                    </p>
+
+                    <!-- Nom -->
+                    <p class="fw-bold mb-0" style="color:#0d6efd;">M le president</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- FILIÈRE EN CHIFFRES -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5" style="color:#0d6efd;">
+            La Filière Café-Cacao en Chiffres
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3 col-6">
+                <div class="stats-card">
+                    <h3>1er</h3>
+                    <p>Producteur mondial de cacao</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="stats-card">
+                    <h3>xxxxxxx</h3>
+                    <p>Producteurs</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="stats-card">
+                    <h3>xxxxxxx</h3>
+                    <p>Tonnes de cacao exportées</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="stats-card">
+                    <h3>40%</h3>
+                    <p>De la production mondiale</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="text-center mb-5" style="color:#0d6efd; font-weight:700;">
+            Actualités Récentes
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- ACTU 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+                    <!-- Date -->
+                    <div style="
+                        position:absolute;
+                        background:#0d6efd;
+                        color:white;
+                        padding:6px 14px;
+                        border-bottom-right-radius:10px;
+                        font-size:14px;
+                        font-weight:bold;">
+                        19 Août 2025
+                    </div>
+
+                    <img src="images/logo/new1.jpeg" class="card-img-top" style="height:210px; object-fit:cover;">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Campagne 2025-2026 : Prix bord champ du cacao et du café</h5>
+                        <p class="text-muted" style="font-size:15px;">
+                            La Côte d'Ivoire a officiellement lancé la campagne café-cacao 2025-2026 avec une hausse
+                            record du prix du cacao à 2800 FCFA/kg, et une légère augmentation pour le café à 1700 FCFA/kg.
+                            Les prix annoncés témoignent de la bonne reprise de la production de cacao, qui a augmenté de 3,26 % sur
+                            la période octobre 2024-juin 2025, tandis que la production de café a connu une baisse significative de près de 70 %.
+                        </p>
+                        <a href="#" class="text-success fw-bold">Lire la suite ➜</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTU 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+                    <!-- Date -->
+                    <div style="
+                        position:absolute;
+                        background:#0d6efd;
+                        color:white;
+                        padding:6px 14px;
+                        border-bottom-right-radius:10px;
+                        font-size:14px;
+                        font-weight:bold;">
+                        19 Août 2025
+                    </div>
+
+                    <img src="images/logo/new2.jpg" class="card-img-top" style="height:210px; object-fit:cover;">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Côte d’Ivoire-AIP/ La filière café-cacao, moteur de croissance économique face aux défis sociaux et environnementaux</h5>
+                        <p class="text-muted" style="font-size:15px;">
+                            Selon le directeur général du Conseil du café-cacao, Koné Brahima Yves, 
+                            ces prix records s’inscrivent dans une dynamique de consolidation des acquis. 
+                            Les revenus cumulés des producteurs de café et de cacao se sont établis, 
+                            au 30 juin 2025, à 2 967,272 milliards FCFA, en hausse de 70,75 % par rapport à 
+                            l’exercice 2023-2024 qui avait généré 1 737,748 milliards FCFA..
+                        </p>
+                        <a href="#" class="text-success fw-bold">Lire la suite ➜</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTU 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+                    <!-- Date -->
+                    <div style="
+                        position:absolute;
+                        background:#0d6efd;
+                        color:white;
+                        padding:6px 14px;
+                        border-bottom-right-radius:10px;
+                        font-size:14px;
+                        font-weight:bold;">
+                        01 Octobre 2025
+                    </div>
+
+                    <img src="images/logo/new3.jpeg" class="card-img-top" style="height:210px; object-fit:cover;">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">Côte d'Ivoire : Filière café cacao, l'ONPCC-CI accusée d'exercer dans l'illégalité, ce que dit l'article 8 de l'ordonnance N°2024-368 du 12 juin 2024</h5>
+                        <p class="text-muted" style="font-size:15px;">
+                            L’Organisation Nationale des Producteurs de Café-Cacao de Côte d'Ivoire (ONPCC CI), 
+                            récemment créée, se trouve aujourd'hui au centre d'une controverse juridique. L’organisation, 
+                            qui a obtenu son récépissé de dépôt en janvier 2025, semble avoir enfreint une disposition importante 
+                            de la législation ivoirienne régissant l’organisation des structures de la société civile.
+                        </p>
+                        <a href="#" class="text-success fw-bold">Lire la suite ➜</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background:#f8f9fa;">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color:#0d6efd; font-weight:700;">Nos Missions</h2>
+
+        <div class="row g-4">
+
+            <!-- Concertation -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center p-4 border-0 shadow-sm">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:linear-gradient(135deg, #0d6efd, #28a745); color:white; font-size:32px;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Concertation</h5>
+                    <p class="mt-2">Réunir l’ensemble des acteurs de la filière pour une gouvernance inclusive et transparente.</p>
+                </div>
+            </div>
+
+            <!-- Compétitivité -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center p-4 border-0 shadow-sm">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:linear-gradient(135deg, #0d6efd, #28a745); color:white; font-size:32px;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Compétitivité</h5>
+                    <p class="mt-2">Améliorer la qualité et la valorisation des produits café-cacao sur les marchés nationaux et internationaux.</p>
+                </div>
+            </div>
+
+            <!-- Durabilité -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center p-4 border-0 shadow-sm">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:linear-gradient(135deg, #0d6efd, #28a745); color:white; font-size:32px;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Durabilité</h5>
+                    <p class="mt-2">Assurer la durabilité économique, sociale et environnementale de la filière.</p>
+                </div>
+            </div>
+
+            <!-- Appui aux producteurs -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center p-4 border-0 shadow-sm">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:linear-gradient(135deg, #0d6efd, #28a745); color:white; font-size:32px;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Appui aux producteurs</h5>
+                    <p class="mt-2">Renforcer les capacités et améliorer les conditions de vie des producteurs.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color:#0d6efd; font-weight:700;">Documents Importants</h2>
+
+        <div class="row g-4">
+
+            <!-- Statuts de l’OIA -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 text-center border-0 shadow-sm h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:none; color:#0d6efd; font-size:32px; border:2px solid #0d6efd; border-radius:50%;">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Statuts de l’OIA</h5>
+                    <p class="mt-2">Textes constitutifs définissant les missions </br> et le fonctionnement de l’organisation.</p>
+                    <a href="#" class="btn btn-success px-4">Télécharger</a>
+                </div>
+            </div>
+
+            <!-- Rapport Annuel 2026 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 text-center border-0 shadow-sm h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:none; color:#0d6efd; font-size:32px; border:2px solid #0d6efd; border-radius:50%;">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Rapport Annuel 2026</h5>
+                    <p class="mt-2">Bilan complet des activités </br> et performances de la filière.</p>
+                    <a href="#" class="btn btn-success px-4">Télécharger</a>
+                </div>
+            </div>
+
+            <!-- Règlement Intérieur -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 text-center border-0 shadow-sm h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                         style="width:80px; height:80px; background:none; color:#0d6efd; font-size:32px; border:2px solid #0d6efd; border-radius:50%;">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color:#0d6efd;">Règlement Intérieur</h5>
+                    <p class="mt-2">Règles de fonctionnement </br> et procédures internes.</p>
+                    <a href="#" class="btn btn-success px-4">Télécharger</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background: linear-gradient(135deg,#0d6efd,#28a745); color:white;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 mb-4">
+                <h3>Contactez-nous</h3>
+                <p>Pour toute information nous concernant, notre équipe est à votre disposition.</p>
+
+                <p>📍 Yamoussoukro, Côte d’Ivoire</p>
+                <p>📞 (+225) 27 20 00 00 00</p>
+                <p>📧 contact@rexcci-cafecacao.ci</p>
+                <p>🕒 Lundi-Vendredi : 8h-17h</p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Votre nom">
+                        <input type="email" class="form-control mb-3" placeholder="Votre email">
+                        <input type="text" class="form-control mb-3" placeholder="Sujet">
+                        <textarea rows="4" class="form-control mb-3" placeholder="Votre message"></textarea>
+                        <button class="btn btn-success w-100">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="text-white" style="background:#1c1c1c;">
+    <div class="container py-5">
+
+        <div class="row">
+
+            <div class="col-lg-3 mb-4">
+                <img src="images/logo/logo-rexcci.jpg" width="120" class="mb-3">
+                <p>
+                    le réseau des exportateurs de cafe cacao de Côte d'Ivoire assure la régulation
+                    et la valorisation des produits café-cacao en Côte d’Ivoire.
+                </p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h5>Liens utiles</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Ministère de l’Agriculture</a></li>
+                    <li><a href="#" class="text-white">Conseil Café-Cacao</a></li>
+                    <li><a href="#" class="text-white">Présidence de la République</a></li>
+                    <li><a href="#" class="text-white">Portail du Gouvernement</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h5>Ressources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Publications</a></li>
+                    <li><a href="#" class="text-white">Textes réglementaires</a></li>
+                    <li><a href="#" class="text-white">Études et recherches</a></li>
+                    <li><a href="#" class="text-white">Bulletins d’information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h5>Newsletter</h5>
+                <p>Abonnez-vous pour recevoir les actualités de la filière café-cacao.</p>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Votre email">
+                    <button class="btn btn-success">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="text-center py-3" style="background:#111;">
+        © 2025 OIA Café-Cacao — Tous droits réservés |
+        <a href="#" class="text-white ms-1">Mentions légales</a> |
+        <a href="#" class="text-white ms-1">Politique de confidentialité</a> |
+        <a href="#" class="text-white ms-1">Plan du site</a>
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
